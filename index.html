@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover, interactive-widget=resizes-content" />
+  <meta name="theme-color" content="#f7f5ef" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <title>Spendly</title>
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="icon" href="./icon.svg" type="image/svg+xml" />
+  <script>try{var t=localStorage.getItem('spendly-theme-v3')||'pennymonkey',al={aero:'frostedlight',aerodark:'frosted',glass:'frosted',glasslight:'frostedlight'},c={pennymonkey:'#f7f5ef',light:'#f4f4f5',coffee:'#efe3d3',prussian:'#020a1c',glow:'#000000',frosted:'#0a0b1c',frostedlight:'#efe9fb',brutal:'#efeeea'};t=al[t]||t;if(c[t]){document.documentElement.dataset.theme=t;document.querySelector('meta[name=theme-color]').content=c[t]}}catch(e){}</script>
+  <script type="module" src="./src/main.js"></script>
+</head>
+<body>
+  <div id="app">
+    <aside id="rail"></aside>
+    <div id="main">
+    <header id="topbar"></header>
+    <div id="titlebar"></div>
+    <main class="views" id="views">
+      <section class="pane" id="pane-add" aria-label="Add expense">
+        <article class="tile" id="t-add"></article>
+      </section>
+      <section class="pane" id="pane-tx" aria-label="Activity">
+        <article class="tile kpi" id="t-spent"></article>
+        <article class="tile" id="t-tx"></article>
+      </section>
+      <section class="pane" id="pane-an" aria-label="Insights">
+        <article class="tile" id="t-donut"></article>
+        <article class="tile" id="t-trend"></article>
+        <article class="tile" id="t-budget"></article>
+      </section>
+    </main>
+    </div>
+    <nav id="tabbar" aria-label="Main"></nav>
+    <div id="scrim"></div>
+  </div>
+  <div id="sheet-root"></div>
+</body>
+</html>
